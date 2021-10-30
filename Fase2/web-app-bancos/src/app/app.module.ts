@@ -9,15 +9,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
-import { Routes, RouterModule } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 // Componentes
 import { AppComponent } from './app.component';
-// import { LoginComponent } from './pages/auth/login/login.component';
-
+import { LoginComponent } from './pages/auth/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
-    // LoginComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -29,6 +30,10 @@ import { AppComponent } from './app.component';
     MatToolbarModule,
     MatButtonModule,
     MatDividerModule,
+    MatCardModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
     // MaterialModule,
   ],
   providers: [],

@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<!-- <mat-toolbar color="primary">
   <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
     <mat-icon *ngIf="!sidenav.opened">
         menu
@@ -8,27 +8,23 @@
     </mat-icon>
 </button>
   Responsive sidebar navigation
-</mat-toolbar>
+</mat-toolbar> -->
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
-    <!-- <img class="avatar mat-elevation-z8" src="https://source.unsplash.com/c_GmwfHBDzk/200x200" /> -->
+    <img class="avatar mat-elevation-z8" src="https://source.unsplash.com/c_GmwfHBDzk/200x200" />
 
     <h4 class="name">John Smith</h4>
-    <!-- <p class="designation">Software Engineer</p> -->
+    <p class="designation">Software Engineer</p>
 
     <mat-divider></mat-divider>
-    <nav>
-      <a routerLink="/">Home</a> | 
-      <a routerLink="/login">Login</a> | 
-    </nav>
-    <button mat-button class="menu-button">
+    <button mat-button routerLink="/login" class="menu-button">
       <mat-icon>home</mat-icon>
       <span>Home</span>
     </button>
-    <button mat-button class="menu-button">
+    <button mat-button routerLink="/login" class="menu-button">
       <mat-icon>person</mat-icon>
-      <span>Profile</span>
+      <span>Login</span>
     </button>
     <button mat-button class="menu-button">
       <mat-icon>info</mat-icon>
@@ -45,7 +41,6 @@
   <mat-sidenav-content>
     <div class="content">
       <router-outlet></router-outlet>
-      Main content
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

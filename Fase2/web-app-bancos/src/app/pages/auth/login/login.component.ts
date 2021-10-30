@@ -1,15 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-
+import {FormControl, Validators} from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  hide = true;
+  email = new FormControl('', [Validators.required, Validators.email]);
 
+  constructor() { }
+  
   ngOnInit(): void {
+  }
+  login(){
+    console.log(this.email.value);
+  }
+  getErrorMessage() {
+    if (this.email.hasError('required')) {
+      return 'You must enter a value';
+    }
+
+    return this.email.hasError('email') ? 'Not a valid email' : '';
+  }
+  myFunc(){
+    console.log("function called");
   }
 
 }
