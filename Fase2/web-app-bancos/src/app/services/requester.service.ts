@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Person } from './person';
 import { LoginResponse } from './interfaces/login-response';
 import { Observable } from 'rxjs';
 import { ResponseObject } from './interfaces/response-object';
@@ -22,12 +21,11 @@ export class RequesterService {
     })
   }
 
-  
-  addPerson(person:Person): Observable<any> {
+  register(username:string, email:string, password:string): Observable<ResponseObject<LoginResponse>> {
     const headers = { 'content-type': 'application/json'}  
-    const body=JSON.stringify(person);
+    const body={username, email, password};
     console.log(body)
-    return this.http.post(this.baseURL + 'people', body,{'headers':headers})
+    return this.http.post<ResponseObject<LoginResponse>>(this.baseURL + 'register', body,{'headers':headers})
   }
   login(email:string, password:string): Observable<ResponseObject<LoginResponse>> {
     const headers = { 'content-type': 'application/json'}  

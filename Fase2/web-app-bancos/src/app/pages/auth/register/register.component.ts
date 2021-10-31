@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
-import { Person } from 'src/app/services/person';
+import { FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 import { RequesterService } from 'src/app/services/requester.service';
 
 @Component({
@@ -10,32 +11,103 @@ import { RequesterService } from 'src/app/services/requester.service';
 })
 export class RegisterComponent implements OnInit {
 
-  hide = true;
-  email = new FormControl('', [Validators.required, Validators.email]);
-  password:string = '';
-  people:Person[] = [];
-  person = new Person();
-  msgError:boolean = false;
-  constructor(private appiService: RequesterService) { }
-  
+  private visibilidadPass:boolean = true;
+  private visiConPass:boolean = true;
+  private username:string = '';
+  private email:FormControl = new FormControl('', [Validators.required, Validators.email]);
+  private password:string = '';
+  private confirmPassword: string = '';
+  private msgError:boolean = false;
+  private mensajeError:string = '';
+
+
+  constructor(
+    private appiService: RequesterService,
+    private cookieService: CookieService,
+    private router: Router,
+  ) { }
+
   ngOnInit(): void {
+    this.cookieService.delete('token');
+    this.cookieService.delete('username');
   }
-  login(){
-    if (this.email.invalid || this.password === ''){
+  get MensajeError(): string {
+    return this.mensajeError;
+  }
+  set Username(name:string) {
+    this.username = name;
+  }
+  get VisibilidadPass(): boolean {
+    return this.visibilidadPass;
+  }
+  set VisibilidadPass(vis:boolean) {
+    this.visibilidadPass = vis;
+  }
+  get VisiConPass(): boolean {
+    return this.visiConPass;
+  }
+  set VisiConPass(vis:boolean) {
+    this.visiConPass = vis;
+  }
+  get Email(): FormControl {
+    return this.email;
+  }
+  set Email(email:FormControl) {
+    this.Email = email;
+  }
+  get Password(): string {
+    return this.password;
+  }
+  set Password(password:string) {
+    this.password = password;
+  }
+  get ConfirmPassword(): string {
+    return this.confirmPassword;
+  }
+  set ConfirmPassword(password:string) {
+    this.confirmPassword = password;
+  }
+  get MsgError(): boolean {
+    return this.msgError;
+  }
+  register() {
+    this.cookieService.set('token', this.email.value);
+    this.cookieService.set('username', this.password);
+    if (this.username === '') {
       this.msgError = true;
+      this.mensajeError = 'Nombre inválido';
       return;
     }
-    this.appiService.login(this.email.value, this.password)
+    if (this.email.invalid) {
+      this.msgError = true;
+      this.mensajeError = 'Correo inválido';
+      return;
+    }
+    if (this.password.length < 5) {
+      this.msgError = true;
+      this.mensajeError = 'La contraseña debe tener una longitud mayor que 8';
+      return;
+    }
+    if (this.password !== this.confirmPassword) {
+      this.msgError = true;
+      this.mensajeError = 'Las contraseñas no coinciden';
+      return;
+    }
+    this.appiService.register(this.username, this.email.value, this.password)
       .subscribe(res => {
-        if (res.code) {
-          
-        }
-        // console.log(res.data.token);
-      })    
-      // 
-      // 
-      
-      //
+        console.log('entra');
+        this.cookieService.set('token', 'TokenAqui');
+        this.cookieService.set('username', 'Kathy');
+        this.router.navigate(['principal']);
+        // if (res.status === 'success' && res.data && res.data.token && res.data.username) {
+        //   this.cookieService.set('token', res.data.token);
+        //   this.cookieService.set('username', res.data.username);
+        //   this.router.navigate(['principal']);
+        //   return;
+        // }
+        // this.msgError = true;
+        // this.mensajeError = (res.code || '') + (res.message || '');
+      });
   }
   getErrorMessage() {
     if (this.email.hasError('required')) {
@@ -44,5 +116,4 @@ export class RegisterComponent implements OnInit {
 
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
-
 }

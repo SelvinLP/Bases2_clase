@@ -1,0 +1,139 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.mat-toolbar {
+  background-color: #004a9f;
+  color: white;
+  margin-left: 0px;
+}
+.mat-sidenav {
+  margin: 16px;
+  width: 200px;
+  border-right: none;
+  background-color: #002b5c;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+.content {
+  height: calc(100vh - 98px);
+  margin: 16px;
+  margin-left: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: lightgray;
+}
+
+.menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+
+  .mat-icon {
+      margin-right: 8px;
+  }
+}
+.mat-sidenav-container {
+  height: calc(100vh - 65px);
+}
+.mat-divider {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.avatar {
+  margin-top: 16px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.name {
+  margin-top: 20px;
+  font-weight: normal;
+}
+
+.designation {
+  margin-top: 2px;
+  font-size: 0.7rem;
+  color: lightgrey;
+}
+.buttonGreen {
+  background-color: #70B800;
+  color: white;
+}
+.menu {
+  background-color: #002b5c;
+  width: 40px;
+  color: white;
+  border-radius: 50%;
+}
+.buttonGreen {
+  background-color: #619200;
+  color: white;
+}
+.buttonBlue {
+  // background-image: radial-gradient(circle at 62.72% 31.83%, #b58ef0 0, #8b6ed8 25%, #574cbe 50%, #002ea4 75%, #00198e 100%);
+  background-color: #5B45E3;
+  color: white;
+}
+.buttonBlue, .buttonGreen {
+  font-family: 'Tahoma';
+  font-size: 15px;
+}
+.txt {
+  width: 100%;
+}
+.msgError {
+  font-size: 15px;
+}
+.cardLogin {
+  width: 100%;
+  border: #696969 1px solid;
+}
+.padre {
+  // background-color: #002b5c;
+  background-image: radial-gradient(circle at 62.72% 31.83%, #6faf9f 0, #6bafa5 3.33%, #67afab 6.67%, #65afb1 10%, #64aeb7 13.33%, #64aebc 16.67%, #66adc0 20%, #6aacc4 23.33%, #6fabc8 26.67%, #75a9ca 30%, #7ca8cc 33.33%, #83a6cd 36.67%, #8ba4cd 40%, #93a2cd 43.33%, #9ba0cb 46.67%, #a39ec9 50%, #aa9cc6 53.33%, #b19ac2 56.67%, #b898be 60%, #be97b9 63.33%, #c395b4 66.67%, #c794af 70%, #ca94a9 73.33%, #cc93a3 76.67%, #ce939d 80%, #cf9397 83.33%, #cf9492 86.67%, #ce958c 90%, #cc9688 93.33%, #c99883 96.67%, #c69980 100%);
+  height: calc(100vh - 18px);
+  // background-image: url('./assets/fondo2.jpeg');
+  background-size: 100% 23%;
+  background-repeat: no-repeat;
+  /*IMPORTANTE*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.padreSinFondo {
+  height: calc(100vh - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hijo {
+  width:30%;
+  // background-image: radial-gradient(circle at 62.72% 31.83%, #6faf9f 0, #6bafa5 3.33%, #67afab 6.67%, #65afb1 10%, #64aeb7 13.33%, #64aebc 16.67%, #66adc0 20%, #6aacc4 23.33%, #6fabc8 26.67%, #75a9ca 30%, #7ca8cc 33.33%, #83a6cd 36.67%, #8ba4cd 40%, #93a2cd 43.33%, #9ba0cb 46.67%, #a39ec9 50%, #aa9cc6 53.33%, #b19ac2 56.67%, #b898be 60%, #be97b9 63.33%, #c395b4 66.67%, #c794af 70%, #ca94a9 73.33%, #cc93a3 76.67%, #ce939d 80%, #cf9397 83.33%, #cf9492 86.67%, #ce958c 90%, #cc9688 93.33%, #c99883 96.67%, #c69980 100%);
+}
+.cardPadd {
+  padding: 30px;
+}
+.marginLeft {
+  display: flex;
+  justify-content: center;
+}
+.marginLeftLink {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+.titulo {
+  color: #696969;
+  display: flex;
+  justify-content: center;
+  font-family: 'Trebuchet MS';
+  margin-bottom: 10px;
+}
