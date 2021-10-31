@@ -6,7 +6,7 @@ import { PrincipalComponent } from './principal.component';
 import { Reporte1Component } from '../reporte1/reporte1.component';
 import { Reporte2Component } from '../reporte2/reporte2.component';
 
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { CookieService } from 'ngx-cookie-service';
 
 // Modules
@@ -20,12 +20,18 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from  '@angular/common/http'
+import { MatTableModule } from '@angular/material/table';
+import { Reporte3Component } from '../reporte3/reporte3.component';
+// For MDB Angular Free
+// import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
+// import { MDBBootstrapModule } from 'angular-bootstrap-md';
 // Componentes
 @NgModule({
   declarations: [
     PrincipalComponent,
     Reporte1Component,
-    Reporte2Component
+    Reporte2Component,
+    Reporte3Component
   ],
   imports: [
     CommonModule,
@@ -41,6 +47,11 @@ import { HttpClientModule } from  '@angular/common/http'
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatTableModule,
+    MatSnackBarModule,
+    // ChartsModule,
+    // WavesModule,
+    // MDBBootstrapModule,
   ]
 })
 export class PrincipalModule { }
