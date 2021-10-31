@@ -11,10 +11,23 @@ import { delay } from 'rxjs/operators';
 })
 export class PrincipalComponent {
   @ViewChild(MatSidenav)
-  sidenav!: MatSidenav;
+  private sidenav!: MatSidenav;
+  private username:string = this.cookieService.get('username');
 
   constructor(private observer: BreakpointObserver, private cookieService: CookieService) { }
 
+  get Sidenav():MatSidenav {
+    return this.sidenav;
+  }
+  set Sidenav(side:MatSidenav) {
+    this.sidenav = side;
+  }
+  get Username():string {
+    return this.username;
+  }
+  set Username(user:string) {
+    this.username = user;
+  }
   ngAfterViewInit() {
     this.observer
       .observe(['(max-width: 800px)'])

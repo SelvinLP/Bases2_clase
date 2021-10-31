@@ -62,7 +62,7 @@ export class LoginComponent implements OnInit {
       .subscribe(res => {
         console.log('entra');
         this.cookieService.set('token', 'TokenAqui');
-        this.cookieService.set('username', 'Kathy');
+        this.cookieService.set('username', 'Kathy2');
         this.router.navigate(['principal']);
         // if (res.status === 'success' && res.data && res.data.token && res.data.username) {
         //   this.cookieService.set('token', res.data.token);

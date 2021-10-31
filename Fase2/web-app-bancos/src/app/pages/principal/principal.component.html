@@ -11,43 +11,37 @@
 </mat-toolbar> -->
 
 <div class="menu">
-  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
-    <mat-icon *ngIf="!sidenav.opened">
+  <button mat-icon-button *ngIf="Sidenav.mode === 'over'" (click)="Sidenav.toggle()">
+    <mat-icon *ngIf="!Sidenav.opened">
         menu
     </mat-icon>
-    <mat-icon *ngIf="sidenav.opened">
+    <mat-icon *ngIf="Sidenav.opened">
         close
     </mat-icon>
 </button>
 </div>
-
-
 <mat-sidenav-container>
-  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
-    <img class="avatar mat-elevation-z8" src="https://source.unsplash.com/c_GmwfHBDzk/200x200" />
-
-    <h4 class="name">John Smith</h4>
-    <p class="designation">Software Engineer</p>
-
+  <mat-sidenav #Sidenav="matSidenav" class="mat-elevation-z8">
+    <img class="avatar mat-elevation-z8" src="https://www.pinclipart.com/picdir/big/211-2118971_happy-face-chalk-png-hope-you-enjoy-my.png" />
+    <h4 class="name">{{Username}}</h4>
+    <!-- <p class="designation">Software Engineer</p> -->
     <mat-divider></mat-divider>
-    <button mat-button routerLink="/login" class="menu-button">
-      <mat-icon>home</mat-icon>
-      <span>Home</span>
-    </button>
-    <button mat-button routerLink="/login" class="menu-button">
-      <mat-icon>person</mat-icon>
-      <span>Login</span>
+    <button mat-button class="menu-button">
+      <mat-icon>table_chart</mat-icon>
+      <span>Ranking</span>
     </button>
     <button mat-button class="menu-button">
-      <mat-icon>info</mat-icon>
-      <span>About</span>
+      <mat-icon>assessment</mat-icon>
+      <span>Gráfico Ranking</span>
     </button>
-    
-    <mat-divider></mat-divider>
-    
     <button mat-button class="menu-button">
-      <mat-icon>help</mat-icon>
-      <span>Help</span>
+      <mat-icon>cloud_upload</mat-icon>
+      <span>Carga de Datos</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-button class="menu-button" routerLink="/login">
+      <mat-icon>exit_to_app</mat-icon>
+      <span>Cerrar sesión</span>
     </button>
   </mat-sidenav>
   <mat-sidenav-content>
