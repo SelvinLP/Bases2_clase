@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { LoginResponse } from './interfaces/login-response';
 import { Observable } from 'rxjs';
 import { ResponseObject } from './interfaces/response-object';
+import { RankingBanksResponse } from './interfaces/ranking-banks-response';
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +33,10 @@ export class RequesterService {
     const body={email, password};
     // console.log(body)
     return this.http.post<ResponseObject<LoginResponse>>(this.baseURL + 'log', body,{'headers':headers})
+  }
+  ranking(token:string): Observable<ResponseObject<RankingBanksResponse[]>> {
+    const headers = { token }
+    return this.http.get<ResponseObject<RankingBanksResponse[]>>(this.baseURL + 'ranking2', {'headers':headers})
   }
   
   // async get(url, params?, headers?, data?) {

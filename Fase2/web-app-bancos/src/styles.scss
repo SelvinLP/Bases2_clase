@@ -23,7 +23,7 @@
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  color: lightgray;
+  color: #9F9F9F;
 }
 
 .menu-button {
@@ -137,4 +137,23 @@
   justify-content: center;
   font-family: 'Trebuchet MS';
   margin-bottom: 10px;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 10px 7px;
+  width: 1100px;
+}
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+  color: black;
+}
+.spaceCell {
+  margin-right: '20px'
+}
+.fondoTitTable20 {
+  background-color: #ECCEBA;
+}
+.fondoTitTable21 {
+  background-color: #BAD4EC;
 }
