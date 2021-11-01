@@ -1,4 +1,20 @@
+<div *ngIf="chartOptions?.series" id="chart" class="chart">
+  <apx-chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [xaxis]="chartOptions.xaxis"
+    [stroke]="chartOptions.stroke"
+    [colors]="chartOptions.colors"
+    [dataLabels]="chartOptions.dataLabels"
+    [legend]="chartOptions.legend"
+    [markers]="chartOptions.markers"
+    [grid]="chartOptions.grid"
+    [yaxis]="chartOptions.yaxis"
+    [title]="chartOptions.title"
+  ></apx-chart>
+</div>
 
+<!-- 
 <table mat-table [dataSource]="DataSource" class="mat-elevation-z8">
   <ng-container matColumnDef="name">
     <th class="spaceCell"  mat-header-cell *matHeaderCellDef> Banco </th>
@@ -61,5 +77,5 @@
   <tr mat-header-row *matHeaderRowDef="DisplayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: DisplayedColumns;"></tr>
 
-  <!-- Row shown when there is no matching data. -->
-</table>
+
+</table> -->

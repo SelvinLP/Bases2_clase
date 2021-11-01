@@ -22,6 +22,9 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from  '@angular/common/http'
 import { MatTableModule } from '@angular/material/table';
 import { Reporte3Component } from '../reporte3/reporte3.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
+
+
 // For MDB Angular Free
 // import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
 // import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -49,7 +52,7 @@ import { Reporte3Component } from '../reporte3/reporte3.component';
     HttpClientModule,
     MatTableModule,
     MatSnackBarModule,
-    // ChartsModule,
+    NgApexchartsModule,
     // WavesModule,
     // MDBBootstrapModule,
   ]
