@@ -12,7 +12,7 @@ export class RequesterService {
 
   constructor(private http: HttpClient) { }
 
-  baseURL: string = "http://localhost:5000/";
+  baseURL: string = "http://localhost:3000/";
 
   request(method: any, url: any, headers: any, body: any, params: any) {
     return this.http.request(method, url, {
@@ -32,11 +32,11 @@ export class RequesterService {
     const headers = { 'content-type': 'application/json'}  
     const body={email, password};
     // console.log(body)
-    return this.http.post<ResponseObject<LoginResponse>>(this.baseURL + 'log', body,{'headers':headers})
+    return this.http.post<ResponseObject<LoginResponse>>(this.baseURL + 'login', body,{'headers':headers})
   }
   ranking(token:string): Observable<ResponseObject<RankingBanksResponse[]>> {
     const headers = { token }
-    return this.http.get<ResponseObject<RankingBanksResponse[]>>(this.baseURL + 'ranking2', {'headers':headers})
+    return this.http.get<ResponseObject<RankingBanksResponse[]>>(this.baseURL + 'ranking', {'headers':headers})
   }
   
   // async get(url, params?, headers?, data?) {

@@ -1,0 +1,10 @@
+docker pull mysql/mysql-server
+docker run --name=contmysql -d mysql/mysql-server:latest
+docker exec -it contmysql mysql -uroot -p
+
+docker logs contmysql
+@bg9+D_;khsz1Up.7t6xFx8c1G5#3E/?
+
+docker exec -it contmysql bash
+mysql -u root -p
+ALTER USER 'root'@'localhost' IDENTIFIED BY '123';
