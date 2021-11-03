@@ -1,0 +1,53 @@
+<!-- <mat-toolbar color="primary">
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened">
+        menu
+    </mat-icon>
+    <mat-icon *ngIf="sidenav.opened">
+        close
+    </mat-icon>
+</button>
+  Responsive sidebar navigation
+</mat-toolbar> -->
+
+<div class="menu">
+  <button mat-icon-button *ngIf="Sidenav.mode === 'over'" (click)="Sidenav.toggle()">
+    <mat-icon *ngIf="!Sidenav.opened">
+        menu
+    </mat-icon>
+    <mat-icon *ngIf="Sidenav.opened">
+        close
+    </mat-icon>
+</button>
+</div>
+<mat-sidenav-container>
+  <mat-sidenav #Sidenav="matSidenav" class="mat-elevation-z8">
+    <img class="avatar mat-elevation-z8" src="https://www.pinclipart.com/picdir/big/211-2118971_happy-face-chalk-png-hope-you-enjoy-my.png" />
+    <h4 class="name">{{Username}}</h4>
+    <!-- <p class="designation">Software Engineer</p> -->
+    <mat-divider></mat-divider>
+    <button mat-button class="menu-button" routerLink="reporte1">
+      <mat-icon>table_chart</mat-icon>
+      <span>Ranking</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="reporte2">
+      <mat-icon>assessment</mat-icon>
+      <span>Gráfico Ranking</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="reporte3">
+      <mat-icon>cloud_upload</mat-icon>
+      <span>Carga de Datos</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-button class="menu-button" routerLink="/login">
+      <mat-icon>exit_to_app</mat-icon>
+      <span>Cerrar sesión</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+ 

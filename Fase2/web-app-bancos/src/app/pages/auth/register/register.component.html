@@ -1,0 +1,59 @@
+<div class="padre">
+  <div class="hijo">
+    <div class="txtGrupoReg">
+      Sistema Bancario
+    </div>
+    <mat-card class="cardLogin">
+      <div class="cardPadd">
+        <div class='titulo'>
+          <mat-card-title>
+            Regístrate
+          </mat-card-title>
+        </div>
+        <mat-card-content>
+          <mat-form-field class="txt" appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input [(ngModel)]="Username" matInput required>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-content>
+          <mat-form-field class="txt" appearance="fill">
+            <mat-label>Correo electrónico</mat-label>
+            <input matInput placeholder="pat@example.com" [formControl]="Email" required>
+            <mat-error *ngIf="Email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-content>
+          <mat-form-field class="txt" appearance="fill">
+            <mat-label>Contraseña</mat-label>
+            <input [(ngModel)]="Password" matInput required [type]="VisibilidadPass ? 'Password' : 'text'">
+            <button mat-icon-button matSuffix (click)="VisibilidadPass = !VisibilidadPass" [attr.aria-label]="'VisibilidadPass Password'"
+              [attr.aria-pressed]="VisibilidadPass">
+              <mat-icon>{{VisibilidadPass ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-content>
+          <mat-form-field class="txt" appearance="fill">
+            <mat-label>Confirmación contraseña</mat-label>
+            <input [(ngModel)]="ConfirmPassword" matInput required [type]="VisiConPass ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="VisiConPass = !VisiConPass" [attr.aria-label]="'VisiConPass password'"
+              [attr.aria-pressed]="VisiConPass">
+              <mat-icon>{{VisiConPass ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-error class="msgError" *ngIf="MsgError">{{MensajeError}}</mat-error>
+        <mat-card-actions>
+          <div class="marginLeft">
+            <!-- <button routerLink="/register" class="buttonBlue" mat-button>Regístrate</button> -->
+            <button (click)="register()" class="buttonBlue" mat-button>Registrarme</button>
+          </div>
+          <div class="marginLeftLink">
+            <a routerLink="/login">Ya tengo una cuenta</a>
+          </div>
+        </mat-card-actions>
+      </div>
+    </mat-card>
+  </div>
+</div>

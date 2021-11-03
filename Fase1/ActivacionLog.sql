@@ -1,3 +1,4 @@
+#--Poner en workbeck local-infile=1 --local-infile=1
 show variables like 'general_log_file';
 show variables like 'general_log%';
 #Activar el log
