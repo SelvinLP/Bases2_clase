@@ -99,7 +99,7 @@ export class Reporte2Component implements OnInit {
     this.chartOptions = {
       series: tmp,
       chart: {
-        height: 350,
+        height: 550,
         type: "line",
         dropShadow: {
           enabled: true,
@@ -132,7 +132,7 @@ export class Reporte2Component implements OnInit {
         "#E02BC0",
       ],
       dataLabels: {
-        enabled: true
+        enabled: false
       },
       stroke: {
         curve: "smooth"
@@ -167,9 +167,9 @@ export class Reporte2Component implements OnInit {
       legend: {
         position: "top",
         horizontalAlign: "right",
-        floating: true,
-        offsetY: -25,
-        offsetX: -5
+        floating: false,
+        offsetY: 0,
+        offsetX: -0
       }
     };
   }
