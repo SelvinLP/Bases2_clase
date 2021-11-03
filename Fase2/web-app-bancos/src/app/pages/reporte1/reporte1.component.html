@@ -1,72 +1,73 @@
-<mat-form-field appearance="standard">
-  <mat-label>Filter</mat-label>
-  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
-</mat-form-field>
+<div class="altoTabla">
+  <mat-form-field appearance="standard">
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+  </mat-form-field>
 
-<table mat-table [dataSource]="DataSource" class="mat-elevation-z8">
-  <ng-container matColumnDef="name">
-    <th class="spaceCell"  mat-header-cell *matHeaderCellDef> Banco </th>
-    <td class="spaceCell"  mat-cell *matCellDef="let element"> {{element.name}} </td>
-  </ng-container>
-  <ng-container matColumnDef="julio20">
-    <th class="fondoTitTable20" mat-header-cell *matHeaderCellDef> Julio20 </th>
-    <td class="fondoTitTable20" mat-cell *matCellDef="let element"> {{element.julio20}} </td>
-  </ng-container>
-  <ng-container matColumnDef="agosto20">
-    <th class="fondoTitTable20" mat-header-cell *matHeaderCellDef> Agost20 </th>
-    <td class="fondoTitTable20" mat-cell *matCellDef="let element"> {{element.agosto20}} </td>
-  </ng-container>
-  <ng-container matColumnDef="septiembre20">
-    <th class="fondoTitTable20" mat-header-cell *matHeaderCellDef> Sept20 </th>
-    <td class="fondoTitTable20" mat-cell *matCellDef="let element"> {{element.septiembre20}} </td>
-  </ng-container>
-  <ng-container matColumnDef="octubre20">
-    <th class="fondoTitTable20" mat-header-cell *matHeaderCellDef> Oct20 </th>
-    <td class="fondoTitTable20" mat-cell *matCellDef="let element"> {{element.octubre20}} </td>
-  </ng-container>
-  <ng-container matColumnDef="noviembre20">
-    <th class="fondoTitTable20" mat-header-cell *matHeaderCellDef> Nov20 </th>
-    <td class="fondoTitTable20" mat-cell *matCellDef="let element"> {{element.noviembre20}} </td>
-  </ng-container>
-  <ng-container matColumnDef="diciembre20">
-    <th class="fondoTitTable20" mat-header-cell *matHeaderCellDef> Dic20 </th>
-    <td class="fondoTitTable20" mat-cell *matCellDef="let element"> {{element.diciembre20}} </td>
-  </ng-container>
-  <ng-container matColumnDef="enero21">
-    <th class="fondoTitTable21" mat-header-cell *matHeaderCellDef> Enero21 </th>
-    <td class="fondoTitTable21" mat-cell *matCellDef="let element"> {{element.enero21}} </td>
-  </ng-container>
-  <ng-container matColumnDef="febrero21">
-    <th class="fondoTitTable21" mat-header-cell *matHeaderCellDef> Febr21 </th>
-    <td class="fondoTitTable21" mat-cell *matCellDef="let element"> {{element.febrero21}} </td>
-  </ng-container>
-  <ng-container matColumnDef="marzo21">
-    <th class="fondoTitTable21" mat-header-cell *matHeaderCellDef> Mar21 </th>
-    <td class="fondoTitTable21" mat-cell *matCellDef="let element"> {{element.marzo21}} </td>
-  </ng-container>
-  <ng-container matColumnDef="abril21">
-    <th class="fondoTitTable21" mat-header-cell *matHeaderCellDef> Abr21 </th>
-    <td class="fondoTitTable21" mat-cell *matCellDef="let element"> {{element.abril21}} </td>
-  </ng-container>
-  <ng-container matColumnDef="mayo21">
-    <th class="fondoTitTable21" mat-header-cell *matHeaderCellDef> May21 </th>
-    <td class="fondoTitTable21" mat-cell *matCellDef="let element"> {{element.mayo21}} </td>
-  </ng-container>
-  <ng-container matColumnDef="junio21">
-    <th class="fondoTitTable21" mat-header-cell *matHeaderCellDef> Jun21 </th>
-    <td class="fondoTitTable21" mat-cell *matCellDef="let element"> {{element.junio21}} </td>
-  </ng-container>
-  <ng-container matColumnDef="julio21">
-    <th class="fondoTitTable21" mat-header-cell *matHeaderCellDef> Julio21 </th>
-    <td class="fondoTitTable21" mat-cell *matCellDef="let element"> {{element.julio21}} </td>
-  </ng-container>
+  <table mat-table [dataSource]="DataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="name">
+      <th class="spaceCell" mat-header-cell *matHeaderCellDef> Banco </th>
+      <td class="spaceCell" mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+    <ng-container matColumnDef="julio20">
+      <th class="fondoTitTable20" mat-header-cell *matHeaderCellDef> Julio20 </th>
+      <td class="fondoTitTable20" mat-cell *matCellDef="let element"> {{element.julio20}} </td>
+    </ng-container>
+    <ng-container matColumnDef="agosto20">
+      <th class="fondoTitTable20" mat-header-cell *matHeaderCellDef> Agost20 </th>
+      <td class="fondoTitTable20" mat-cell *matCellDef="let element"> {{element.agosto20}} </td>
+    </ng-container>
+    <ng-container matColumnDef="septiembre20">
+      <th class="fondoTitTable20" mat-header-cell *matHeaderCellDef> Sept20 </th>
+      <td class="fondoTitTable20" mat-cell *matCellDef="let element"> {{element.septiembre20}} </td>
+    </ng-container>
+    <ng-container matColumnDef="octubre20">
+      <th class="fondoTitTable20" mat-header-cell *matHeaderCellDef> Oct20 </th>
+      <td class="fondoTitTable20" mat-cell *matCellDef="let element"> {{element.octubre20}} </td>
+    </ng-container>
+    <ng-container matColumnDef="noviembre20">
+      <th class="fondoTitTable20" mat-header-cell *matHeaderCellDef> Nov20 </th>
+      <td class="fondoTitTable20" mat-cell *matCellDef="let element"> {{element.noviembre20}} </td>
+    </ng-container>
+    <ng-container matColumnDef="diciembre20">
+      <th class="fondoTitTable20" mat-header-cell *matHeaderCellDef> Dic20 </th>
+      <td class="fondoTitTable20" mat-cell *matCellDef="let element"> {{element.diciembre20}} </td>
+    </ng-container>
+    <ng-container matColumnDef="enero21">
+      <th class="fondoTitTable21" mat-header-cell *matHeaderCellDef> Enero21 </th>
+      <td class="fondoTitTable21" mat-cell *matCellDef="let element"> {{element.enero21}} </td>
+    </ng-container>
+    <ng-container matColumnDef="febrero21">
+      <th class="fondoTitTable21" mat-header-cell *matHeaderCellDef> Febr21 </th>
+      <td class="fondoTitTable21" mat-cell *matCellDef="let element"> {{element.febrero21}} </td>
+    </ng-container>
+    <ng-container matColumnDef="marzo21">
+      <th class="fondoTitTable21" mat-header-cell *matHeaderCellDef> Mar21 </th>
+      <td class="fondoTitTable21" mat-cell *matCellDef="let element"> {{element.marzo21}} </td>
+    </ng-container>
+    <ng-container matColumnDef="abril21">
+      <th class="fondoTitTable21" mat-header-cell *matHeaderCellDef> Abr21 </th>
+      <td class="fondoTitTable21" mat-cell *matCellDef="let element"> {{element.abril21}} </td>
+    </ng-container>
+    <ng-container matColumnDef="mayo21">
+      <th class="fondoTitTable21" mat-header-cell *matHeaderCellDef> May21 </th>
+      <td class="fondoTitTable21" mat-cell *matCellDef="let element"> {{element.mayo21}} </td>
+    </ng-container>
+    <ng-container matColumnDef="junio21">
+      <th class="fondoTitTable21" mat-header-cell *matHeaderCellDef> Jun21 </th>
+      <td class="fondoTitTable21" mat-cell *matCellDef="let element"> {{element.junio21}} </td>
+    </ng-container>
+    <ng-container matColumnDef="julio21">
+      <th class="fondoTitTable21" mat-header-cell *matHeaderCellDef> Julio21 </th>
+      <td class="fondoTitTable21" mat-cell *matCellDef="let element"> {{element.julio21}} </td>
+    </ng-container>
 
 
-  <tr mat-header-row *matHeaderRowDef="DisplayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: DisplayedColumns;"></tr>
+    <tr mat-header-row *matHeaderRowDef="DisplayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: DisplayedColumns;"></tr>
 
-  <!-- Row shown when there is no matching data. -->
-  <tr class="mat-row" *matNoDataRow>
-    <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
-  </tr>
-</table>
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
+  </table>
+</div> 

@@ -26,8 +26,8 @@
         <mat-card-content>
           <mat-form-field class="txt" appearance="fill">
             <mat-label>Contraseña</mat-label>
-            <input [(ngModel)]="Password" matInput required [type]="VisibilidadPass ? 'Password' : 'text'">
-            <button mat-icon-button matSuffix (click)="VisibilidadPass = !VisibilidadPass" [attr.aria-label]="'VisibilidadPass Password'"
+            <input [(ngModel)]="Password" matInput required [type]="VisibilidadPass ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="VisibilidadPass = !VisibilidadPass" [attr.aria-label]="'VisibilidadPass password'"
               [attr.aria-pressed]="VisibilidadPass">
               <mat-icon>{{VisibilidadPass ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
