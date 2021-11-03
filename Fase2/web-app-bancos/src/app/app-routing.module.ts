@@ -5,6 +5,7 @@ import { RegisterComponent } from './pages/auth/register/register.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'principal', loadChildren: () => import('./pages/principal/principal.module').then(m => m.PrincipalModule) },
 ];
