@@ -23,8 +23,8 @@ import { HttpClientModule } from  '@angular/common/http'
 import { MatTableModule } from '@angular/material/table';
 import { Reporte3Component } from '../reporte3/reporte3.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
-
-
+import {MatGridListModule} from '@angular/material/grid-list';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 // For MDB Angular Free
 // import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
 // import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -53,6 +53,8 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     MatTableModule,
     MatSnackBarModule,
     NgApexchartsModule,
+    MatGridListModule,
+    ScrollingModule,
     // WavesModule,
     // MDBBootstrapModule,
   ]

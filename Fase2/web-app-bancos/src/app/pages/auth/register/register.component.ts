@@ -95,18 +95,13 @@ export class RegisterComponent implements OnInit {
     }
     this.appiService.register(this.username, this.email.value, this.password)
       .subscribe(res => {
-        console.log('entra');
-        this.cookieService.set('token', 'TokenAqui');
-        this.cookieService.set('username', 'Kathy');
-        this.router.navigate(['principal']);
-        // if (res.status === 'success' && res.data && res.data.token && res.data.username) {
-        //   this.cookieService.set('token', res.data.token);
-        //   this.cookieService.set('username', res.data.username);
-        //   this.router.navigate(['principal']);
-        //   return;
-        // }
-        // this.msgError = true;
-        // this.mensajeError = (res.code || '') + (res.message || '');
+        if (res.status === 'success' && res.data &&res.data.token && res.data.username) {
+          this.cookieService.set('username', res.data.username);
+          this.router.navigate(['principal']);
+          return;
+        }
+        this.msgError = true;
+        this.mensajeError = (res.code || '') + (res.message || '');
       });
   }
   getErrorMessage() {
