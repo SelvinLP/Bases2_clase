@@ -78,6 +78,7 @@ ORDER BY promedio DESC
 LIMIT 3) T
 ORDER BY posicion ASC);
 
+SELECT * FROM mejores_3_bancos_del_primer_semestre;
 
 -- '\nG&T CONTINENTAL, S. A.', '1'
 -- '\nDE DESARROLLO RURAL, S. A.', '2'
